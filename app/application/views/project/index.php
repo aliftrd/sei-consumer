@@ -117,6 +117,7 @@
         const choices = new Choices(lokasiElement)
 
         let form = document.getElementById("form-modal")
+        form.reset()
 
         if (action) {
             form.setAttribute('action', action)
@@ -133,6 +134,15 @@
         }
 
         document.getElementById("cr-modal").showModal()
+    }
+
+    function reset() {
+        document.getElementById('nama-proyek').value = ""
+        document.getElementById('client').value = ""
+        document.getElementById('pimpinan').value = ""
+        document.getElementById('tgl-mulai').value = ""
+        document.getElementById('tgl-selesai').value = ""
+        document.getElementById('keterangan').value = ""
     }
 
     function deleteModalShow(action) {
